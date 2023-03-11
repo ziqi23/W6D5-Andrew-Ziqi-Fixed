@@ -32,5 +32,7 @@ class Cat < ApplicationRecord
         time_ago_in_words(birth_date)
     end
 
-    
+    def self.get_color
+        COLORS
+    end
 end
