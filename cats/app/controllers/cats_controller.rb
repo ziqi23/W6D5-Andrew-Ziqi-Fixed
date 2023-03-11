@@ -12,12 +12,13 @@ class CatsController < ApplicationController
     end
 
     def edit
+        @cat_found =  Cat.find_by(id: params[:id])
+        render :edit
     end
 
     def show
         @cat_found =  Cat.find_by(id: params[:id])
         render :show
-        
     end
 
     def update

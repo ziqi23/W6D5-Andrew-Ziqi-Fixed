@@ -1,0 +1,38 @@
+<form action="/cats" method = 'Post'>
+
+
+<label for="name">Name</label>
+<input type="text" id = 'name' name = 'cat[name]'>
+
+<br>
+
+<input type="radio" id='m' value='m' name='cat[sex]'>
+<label for='m'>M</label>
+<input type="radio" id='f' value='f' name='cat[sex]'>
+<label for='f'>F</label>
+
+<br>
+<select name="cat[color]">
+    
+    <option disabled selected>Pick a color</option>
+    <% Cat.get_color.each do |color| %>
+    <option value="<%= color %>"><%= color %></option>
+    <% end %>
+</select>
+
+<br>
+
+<label for="birth_date">Birth Date:</label>
+<input type="date" id="birth_date" name="cat[birth_date]">
+
+<br>
+
+<label for="description">Description</label>
+<textarea id="description" name="cat[description]"></textarea>
+
+<br>
+
+<input type="submit">
+
+</form>
+
